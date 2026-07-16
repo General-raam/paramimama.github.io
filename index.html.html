@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Feliz Cumpleaños!</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+    background:linear-gradient(135deg,#ff66b2,#ffcc66,#66ccff);
+    background-attachment:fixed;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+h1{
+    color:white;
+    font-size:60px;
+    text-shadow:3px 3px 8px black;
+    margin-top:20px;
+}
+
+p{
+    color:white;
+    font-size:25px;
+    font-weight:bold;
+}
+
+img{
+    width:350px;
+    border-radius:20px;
+    border:8px solid white;
+    box-shadow:0 0 25px white;
+}
+
+button{
+    margin-top:20px;
+    padding:15px 30px;
+    font-size:20px;
+    background:#ff1493;
+    color:white;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff69b4;
+}
+
+/* Globos */
+
+.balloon{
+    position:absolute;
+    bottom:-150px;
+    width:70px;
+    height:90px;
+    border-radius:50%;
+    animation:subir 10s linear infinite;
+}
+
+.balloon::after{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:90px;
+    background:white;
+    left:50%;
+    top:90px;
+}
+
+.rojo{background:red; left:10%; animation-duration:8s;}
+.azul{background:deepskyblue; left:30%; animation-duration:10s;}
+.verde{background:limegreen; left:50%; animation-duration:9s;}
+.amarillo{background:gold; left:70%; animation-duration:11s;}
+.morado{background:violet; left:90%; animation-duration:7s;}
+
+@keyframes subir{
+    0%{
+        transform:translateY(0);
+    }
+    100%{
+        transform:translateY(-120vh);
+    }
+}
+</style>
+
+</head>
+<body>
+
+<h1>🎉 ¡Feliz Cumpleaños! 🎂</h1>
+
+<p>Que tengas un día lleno de alegría, amor y muchas sorpresas te deseo lo mejor mamita linda te quiero con todo el corazon aun que aveces me saques de las casillas o yo a ti te quiero al igual que mi papa y tu familia
+    que tengas un hermoso cumpleaños y que puedas estar conmigo otro año mas por que sin ti aveces no se que hacer en mi vida diaria.</p>
+
+<!-- CAMBIA EL NOMBRE DE LA IMAGEN -->
+<img src="imagenesZ/mama.jpg" alt="Foto de cumpleaños">
+
+<br>
+
+<button onclick="document.getElementById('musica').play()">
+▶ Reproducir Música
+</button>
+
+<!-- CAMBIA EL NOMBRE DEL ARCHIVO DE MÚSICA -->
+<audio id="musica" loop>
+    <source src="audio/Diomedes Díaz - Tu Cumpleaños.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+</audio>
+
+<!-- Globos -->
+
+<div class="balloon rojo"></div>
+<div class="balloon azul"></div>
+<div class="balloon verde"></div>
+<div class="balloon amarillo"></div>
+<div class="balloon morado"></div>
+
+</body>
+</html>
